@@ -1,1 +1,2 @@
 # WhizzChat
+Finish read me 
