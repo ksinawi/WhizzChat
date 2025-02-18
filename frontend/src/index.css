@@ -16,3 +16,286 @@ body
     position: relative;
     font-family: 'Poppins', sans-serif;
 }
+
+.login
+{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container, .login-img {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 25%);
+}
+
+.login-container
+{ 
+  padding: 3.5rem;
+  width: 18rem;
+  max-width: 100%;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 25%);
+}
+
+.login-img
+{
+  width: 20rem; 
+  max-width: 100%;
+  padding: 0;
+}
+
+.login-img img {
+  width: 100%; 
+  height: auto;
+  display: block;
+}
+
+.login-header
+{
+  justify-content: center;
+  padding: 10px 0 10px 0;
+  display: flex;
+}
+
+.login-upper-text
+{
+    color: black;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+
+a
+{
+    color: black;
+    text-decoration: none;
+}
+
+.login-input-boxes
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.input
+{
+  height: 45px;
+  width: 90%;
+  border-radius: 20px;
+  padding: 0 0 0 45px;
+  margin: 5px 0;
+}
+
+.create-button
+{
+  height: 45px;
+  width: 107.5%;
+  border-radius: 20px;
+  font-size: 18px;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.create-button:hover
+{
+    background: #B5D4FF;
+    transform: 2s;
+}
+
+.login-lower-text
+{
+  color: black;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 10px 0;
+}
+
+/* SignUp Screen */
+.sign-up
+{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up-container, .sign-up-img 
+{
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 25%);
+  height: 100%;
+}
+
+.sign-up-container
+{ 
+  padding: 3.5rem;
+  width: 18rem;
+  max-width: 100%;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 25%);
+}
+
+.sign-up-img
+{
+  width: 20rem; 
+  max-width: 100%;
+  padding: 0;
+  height: 37.7rem;
+}
+
+.sign-up-img img 
+{
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Homepage */
+.hompage
+{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage-img
+{
+  width: 1450px;
+  height: 820px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: white;
+  position: relative;
+  display: flex;
+  justify-content: center;  
+  align-items: center;     
+  position: relative;
+}
+
+.homepage-container
+{
+  background-color: rgb(255, 253, 253);
+  padding: 3.5rem;
+  width: 70rem;
+  height: 34rem;
+  max-width: 100%;
+  border-radius: 8px;
+  justify-content: center;  
+  align-items: center;     
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 25%);
+}
+
+.contact-container
+{
+  background-color: rgb(248, 246, 246);
+  padding: 3.5rem;
+  width: 12rem;
+  height: 28rem;
+  max-width: 100%;
+  border-radius: 8px;
+  justify-content: center;  
+  align-items: center;     
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 25%);
+  overflow-y: auto;
+}
+
+ul 
+{
+  list-style-type: none; 
+  padding: 0;
+}
+
+ul li 
+{
+  background-color: rgb(248, 246, 246);
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul li:hover {
+  background-color: #f0f0f0;
+  transform: translateX(5px);
+}
+
+ul li span {
+  font-size: 0.9rem;
+  color: #888;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.message-container
+{
+  background-color: rgb(248, 246, 246);
+  padding: 3.5rem;
+  width: 38rem;
+  height: 28rem;
+  max-width: 100%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: flex-start;   
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 25%);
+}
+
+.main-message
+{
+  display: flex;              
+  flex-direction: row;         
+  justify-content: space-between;
+  align-items: baseline;        
+  width: 100%; 
+}
+
+.message-input
+{
+  height: 45px;
+  width: 100%;                 
+  border-radius: 20px;
+  padding: 0 1rem;             
+  margin-top: 1rem;            
+  border: 1px solid #ccc;      
+  box-sizing: border-box; 
+}
+
+.send-button
+{
+  height: 45px;
+  width: 70px;                 
+  margin-left: 0.5rem;         
+  border-radius: 20px;
+  background-color: #B5D4FF;   
+  color: white;               
+  border: none;
+  cursor: pointer;            
+  display: flex;               
+  align-items: center;         
+  justify-content: center;     
+  font-size: 16px;  
+}
+
+.send-button:hover
+{
+  background-color: #007BFF;
+}
+
+
