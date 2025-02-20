@@ -3,7 +3,7 @@ import bcrypt from "bcryptjs";
 import User from "../models/user_model.js";
 import generateToken from "../utils/token.js";
 
-export const signup = async (res, req) => {
+export const signup = async (req, res) => {
     try {
 
         const { name, username, email, password, confirmPassword } = req.body;
@@ -42,8 +42,8 @@ export const signup = async (res, req) => {
         });
 
         if (newUser) {
-            generateToken(newUser._id, res);
             await newUser.save();
+            generateToken(newUser._id, res);
             res.status(201).json({
                 id: newUser._id,
                 name: newUser.name,
@@ -55,11 +55,11 @@ export const signup = async (res, req) => {
         }
         
     } catch (error) {
-        res.status(500).json({ message: error.json });
+        res.status(500).json({ message: error.message });
     }
 };
 
-export const login = async (res, req) => {
+export const login = async (req, res) => {
     try {
         
         const { username, password } = req.body;
@@ -97,7 +97,7 @@ export const login = async (res, req) => {
     }
 };
 
-export const logout = (res, req) => {
+export const logout = (req, res) => {
     try {
         
         res.cookie("jwt", "", {

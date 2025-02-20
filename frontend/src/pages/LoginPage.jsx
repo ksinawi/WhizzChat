@@ -1,15 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import backgroundImage from '../images/background.jpg';
+import backgroundImage from '../images/background.jpg'
+import toast from 'react-hot-toast' 
+import axios from 'axios'
 
 const LoginPage = () => {
-
-    const navigate = useNavigate();
-
-    const signUpLink = (event) => {
-        event.preventDefault();
-        navigate('/signup');
-    };
 
     return (
         <div className="login">
@@ -26,31 +21,33 @@ const LoginPage = () => {
                     <p>Need An Account? <a href="#" onClick={signUpLink}>Sign-Up</a></p>
                 </div>
 
-                <div className="login-input-boxes">
-                    <input 
-                        type="text" 
-                        className="input" 
-                        placeholder="Username" 
-                        //value={formData.username} 
-                        //onChange={(e) => setFormData({...formData, username: e.target.value})} 
-                    />
-                </div>
+                <form onSubmit={handleLogin}>
+                    <div className="login-input-boxes">
+                        <input 
+                            type="text" 
+                            className="input" 
+                            placeholder="Username" 
+                            value={formData.username} 
+                            onChange={(e) => setFormData({...formData, username: e.target.value})} 
+                        />
+                    </div>
 
-                <div className="login-input-boxes">
-                    <input 
-                        type="password" 
-                        className="input" 
-                        placeholder="Password" 
-                        //value={formData.password} 
-                        //onChange={(e) => setFormData({...formData, password: e.target.value})} 
-                    />
-                </div>
+                    <div className="login-input-boxes">
+                        <input 
+                            type="password" 
+                            className="input" 
+                            placeholder="Password" 
+                            value={formData.password} 
+                            onChange={(e) => setFormData({...formData, password: e.target.value})} 
+                        />
+                    </div>
 
-                <div className="login-input-boxes">
-                    <button type="submit" className="create-button">
-                        Login
-                    </button>
-                </div>
+                    <div className="login-input-boxes">
+                        <button type="submit" className="create-button">
+                            Login
+                        </button>
+                    </div>
+                </form>
 
                 <div className="login-lower-text">
                     <input type="checkbox" className="remember" name="remember" />
@@ -59,6 +56,6 @@ const LoginPage = () => {
             </div>
         </div>
     )
-};
+}
   
-export default LoginPage;
+export default LoginPage
